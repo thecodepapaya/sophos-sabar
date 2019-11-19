@@ -1,0 +1,8 @@
+{
+  "name": "Sophos Connect Sabar",
+  "description": "Connect to Sabar Sophos Wifi easily without the need of login portal",
+  "uuid": "sophossabar@ashutoshsingh05.co",
+  "shell-version": [
+    "3.34"
+  ]
+}
