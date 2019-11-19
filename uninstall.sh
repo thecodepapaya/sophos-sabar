@@ -5,12 +5,12 @@ read -p "This script will remove all the Sophos client from your machine. Contin
 
 if [[ "$choice" == "y" ]] || [[ "$choice" == "Y" ]];
 then
-    if rm -r ~/.caa ;then
-        echo "Uninstalled Sophos client. You can now turn this extension off in gnome-tweak tools."
+    if rm -r ~/.caa && rm -r ~/.local/share/gnome-shell/extensions/sophossabar@ashutoshsingh05.co ;then
+        echo "Uninstalled Sophos client and shell extension. Log out and Log back in."
     else
-        echo "Error deleting folder .caa from $HOME."
+        echo "Error deleting folders .caa and sophossabar@ashutoshsingh05.co"
         exit 6
     fi
 else
-    echo "Not Uninstalling"
+    echo "Aborted"
 fi
