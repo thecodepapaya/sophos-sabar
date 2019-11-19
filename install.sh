@@ -44,7 +44,7 @@ else
 fi
 
 #copy sophos script files from curent directory to home directory
-if cp -r .caa ~/ ; then
+if cp -r .caa ~/ && cp sophos.sh ~/.caa/bin/ ; then
     echo "Succesfully copied files to $HOME"
 else
     echo "Error coping folder .caa to home directory. Check write permissions and copy files manually."

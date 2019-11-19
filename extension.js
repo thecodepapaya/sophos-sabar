@@ -61,7 +61,7 @@ function _connect() {
 
   try {
     Util.trySpawnCommandLine(
-      'gnome-terminal -- sh -c "~/.local/share/gnome-shell/extensions/sophossabar@ashutoshsingh05.co/sophos.sh; sleep 5"'
+      'gnome-terminal -- sh -c "~/.caa/bin/sophos.sh; sleep 5"'
     );
   } catch (err) {
     Main.notify("Error: " + err);
