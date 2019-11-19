@@ -27,40 +27,42 @@ const Main = imports.ui.main;
 const Tweener = imports.ui.tweener;
 const Util = imports.misc.util;
 
-let text, button;
+let button;
 
-function _hideHello() {
-  Main.uiGroup.remove_actor(text);
-  text = null;
+function _disconnect() {
+  // Main.uiGroup.remove_actor(text);
+  // text = null;
 }
 
-function _showHello() {
-  if (!text) {
-    text = new St.Label({
-      style_class: "helloworld-label",
-      text: "Hello, world!"
-    });
-    Main.uiGroup.add_actor(text);
-  }
+function _connect() {
+  // if (!text) {
+  //   text = new St.Label({
+  //     style_class: "helloworld-label",
+  //     text: "Hello, world!"
+  //   });
+  //   Main.uiGroup.add_actor(text);
+  // }
 
-  text.opacity = 255;
+  // text.opacity = 255;
 
-  let monitor = Main.layoutManager.primaryMonitor;
+  // let monitor = Main.layoutManager.primaryMonitor;
 
-  text.set_position(
-    Math.floor(monitor.width / 2 - text.width / 2),
-    Math.floor(monitor.height / 2 - text.height / 2)
-  );
+  // text.set_position(
+  //   Math.floor(monitor.width / 2 - text.width / 2),
+  //   Math.floor(monitor.height / 2 - text.height / 2)
+  // );
 
-  Tweener.addTween(text, {
-    opacity: 0,
-    time: 2,
-    transition: "easeOutQuad",
-    onComplete: _hideHello
-  });
+  // Tweener.addTween(text, {
+  //   opacity: 0,
+  //   time: 2,
+  //   transition: "easeOutQuad",
+  //   onComplete: _disconnect
+  // });
 
   try {
-    Util.trySpawnCommandLine('gnome-terminal -- sh -c "sleep 5"');
+    Util.trySpawnCommandLine(
+      'gnome-terminal -- sh -c "~/.local/share/gnome-shell/extensions/sophossabar@ashutoshsingh05.co/sophos.sh; sleep 5"'
+    );
   } catch (err) {
     Main.notify("Error: " + err);
   }
@@ -96,7 +98,7 @@ function init() {
   });
 
   button.set_child(icon);
-  button.connect("button-press-event", _showHello);
+  button.connect("button-press-event", _connect);
 }
 
 function enable() {

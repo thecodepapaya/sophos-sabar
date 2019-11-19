@@ -1,0 +1,31 @@
+Client Authentication Agent
+
+Unpack all files into your HOME directory (tar -xzvfp <FILENAME>).
+You should have the following files:
+<HOME>/.caa/
+            ca-cert.pem
+            caa.conf
+            README
+       bin/
+            caa
+Move the executable (bin/caa) wherever you want and let it be called from within
+~/.bash_profile or .profile.
+
+Before initially starting the program, prepare your credentials in the
+configuration file caa.conf
+The format of the file is:
+  Copernicus host: <IPv4 address>
+  Username: <USERNAME>
+  Password: <PASSWORD>
+After the first start of the program, the plaintext password is replaced with
+an encrypted version of it.
+
+Usage: caa [OPTION]...
+
+Options:
+ -d, --daemon     start in daemon mode
+ -s, --stop       stop running daemon
+ -v, --verbose    output debug information
+ -l, --log=FILE   log into FILE
+ -h, --help       display list of parameters
+ -V, --version    print program version
