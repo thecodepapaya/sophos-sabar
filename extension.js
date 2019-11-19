@@ -89,9 +89,10 @@ function init() {
     track_hover: true
   });
   let icon = new St.Icon({
-    icon_name: "system-run",
+    // icon_name: "sophos-icon",
     // icon_type: St.IconType.SYMBOLIC,
-    style_class: "system-status-icon"
+    // style_class: "system-status-icon"
+    style_class: "sophos-icon"
   });
 
   button.set_child(icon);
