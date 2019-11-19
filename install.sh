@@ -75,6 +75,14 @@ else
     exit 5
 fi
 
+#enable the extension
+if gnome-extensions enable sophossabar@ashutoshsingh05.co ; then
+    echo "Enabled extension sophossabar. You should see a new icon in the top right corner. Log out and log back in if you don't see anything."
+else
+    echo "Error enabling sophossabar extension"
+    exit 8
+fi
+
 # echo "Copernicus host: $ip" > caa.conf
 # echo "Username: $id" >> caa.conf
 # echo "Password: $password" >> caa.conf
