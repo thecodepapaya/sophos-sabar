@@ -6,7 +6,7 @@ Helps you connect to the Sabar campus sophos network without the need of any log
 ## 🛠 Requirements
 - Your laptop 🙄
 - Linux OS
-- gnome-tweak tools (you can install it with `sudo apt install gnome-tweaks`)
+- gnome-tweak tool (can be installed with `sudo apt install gnome-tweaks`)
 - Gnome Shell (I made this on v3.34.1, not sure on what other versions it's going to work, you are free to test on different verions and send relevant PRs)
 
 ## 🍼 How to use
